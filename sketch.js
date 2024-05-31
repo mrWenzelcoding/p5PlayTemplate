@@ -1,10 +1,12 @@
 let ball;
+let player;
 
 function setup() {
-	new Canvas(500, 500);
+	new Canvas(720, 480, 'fullscreen');
 
 	ball = new Sprite();
 	ball.diameter = 50;
+	ball.color = "grey"
 }
 
 function draw() {
@@ -12,6 +14,6 @@ function draw() {
 
 	if (mouse.presses()) {
 		ball.speed = 10;
-		ball.moveTo(mouse);
+		ball.moveTo(mouse, 5);
 	}
 }
